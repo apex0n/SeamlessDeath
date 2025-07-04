@@ -1,0 +1,58 @@
+# SeamlessDeath Plugin Configuration
+# This plugin provides seamless death experience with kill cam functionality
+
+# Main plugin settings
+enabled: true
+keep-inventory: false
+suppress-death-messages: false
+
+# Death drops configuration
+death-drops:
+  drop-inventory: true
+  drop-experience: true
+  # Experience drop mode: vanilla or full
+  # vanilla: Drops experience like base game (partial loss)
+  # full: Drops experience orbs that give back the full level
+  experience-drop-mode: vanilla
+
+# Kill cam duration in seconds
+killcam-duration: 5
+
+# Kill cam type: auto, first-person, third-person, cinematic
+# auto: Automatically chooses the best available option
+# first-person: Shows from killer's perspective (if available)
+# third-person: Shows from behind the killer/attacker
+# cinematic: Orbiting camera around death location
+killcam-type: auto
+
+# Camera settings
+camera:
+  smooth-movement: true
+  orbit-speed: 0.1
+  orbit-radius: 5.0
+  orbit-height: 3.0
+  third-person-distance: 3.0
+  third-person-height: 2.0
+
+# Visual and audio effects
+effects:
+  death-particles: true
+  death-sound: true
+  respawn-sound: true
+
+# Customizable messages
+messages:
+  death-title: "§c§lYOU DIED"
+  death-subtitle: "§7Viewing kill cam..."
+  respawn-message: "§aYou have been respawned!"
+  no-permission: "§cYou don't have permission to use this command!"
+  plugin-enabled: "§aSeamless death enabled!"
+  plugin-disabled: "§cSeamless death disabled!"
+  config-reloaded: "§aConfiguration reloaded!"
+
+# Advanced settings (modify with caution)
+advanced:
+  respawn-delay-ticks: 1
+  cleanup-delay-ticks: 5
+  camera-update-interval: 2
+  particle-update-interval: 2
