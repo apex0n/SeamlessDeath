@@ -9,6 +9,7 @@ import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
+import org.bukkit.Color;
 import org.bukkit.World;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -214,7 +215,7 @@ public class KillCamManager implements Listener {
                 }
                 
                 // Create DustOptions for REDSTONE particle (red color, size 1.0)
-                Particle.DustOptions dustOptions = new Particle.DustOptions(org.bukkit.Color.RED, 1.0f);
+                Particle.DustOptions dustOptions = new Particle.DustOptions(Color.RED, 1.0f);
                 location.getWorld().spawnParticle(Particle.REDSTONE, location.clone().add(0, 1, 0), 10, 0.5, 0.5, 0.5, 0, dustOptions);
                 location.getWorld().spawnParticle(Particle.SMOKE_NORMAL, location.clone().add(0, 0.5, 0), 5, 0.3, 0.3, 0.3, 0.02);
                 
@@ -263,10 +264,6 @@ public class KillCamManager implements Listener {
         // Reset food and saturation
         victim.setFoodLevel(20);
         victim.setSaturation(20.0f);
-        
-        // Reset experience (optional - can be configured later)
-        // victim.setExp(0);
-        // victim.setLevel(0);
         
         // Send respawn message
         victim.sendMessage(plugin.getConfigManager().getRespawnMessage());

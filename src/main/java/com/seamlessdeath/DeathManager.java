@@ -18,8 +18,6 @@ import org.bukkit.entity.ExperienceOrb;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.UUID;
-import java.util.List;
-import java.util.ArrayList;
 
 public class DeathManager implements Listener {
     
